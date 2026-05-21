@@ -1,0 +1,491 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 247, 255);
+    font-size: 1.1rem;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+}
+
+nav .navbarHead div {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .navbarHead ul li {
+    padding: 0 9% 0 1%;
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    border-left: 1.5px solid black;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 1.1 rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+main img {
+    width: 100%;
+    height: 100vh;
+}
+
+main div {
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    width: 40%;
+    margin-left: 50%;
+    font-weight: 900;
+    color: rgb(0, 144, 96);
+}
+
+.parrafo-banner {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+.buttonAction {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 1000;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 6px 10px;
+    background-color: rgb(43, 245, 111);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px black;
+    border: 1.5px solid rgb(0, 86, 0);
+    cursor: pointer;
+    width: 40%;
+}
+
+.parrafo {
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.boton {
+    width: 85%;
+    background-color: rgb(44, 163, 64);
+    color: white;
+}
+
+#products {
+    display: block;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.card {
+    width: 40%;
+    border: 1px solid rgb(193, 193, 193);
+}
+
+#cards div img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.category {
+    font-size: 0.7rem;
+    color: rgb(130, 130, 130);
+    padding-left: 5%;
+}
+
+.price {
+    color: rgb(0, 148, 0);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.card div div button {
+    margin-bottom: 1rem;
+}
+
+.reviews {
+    margin-top: 7vh;
+    padding-top: 1vh;
+    background-color: rgb(223, 238, 255);
+
+}
+
+#reviews {
+    height: 65vh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+#reviews div {
+    padding: 1rem;
+    background-color: azure;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+#reviews div p {
+    text-align: justify;
+    margin: 0;
+}
+
+.resenia-estrellas i {
+    color: #f5a623;
+    font-size: 14px;
+}
+
+.resenias-nombre {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.resenias-provincia {
+    font-weight: 200;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 1rem;
+}
+
+#newsletter {
+    border: 20px solid rgba(35, 95, 197, 0.966);
+    background-color: rgba(1, 73, 198, 0.332);
+    height: 40vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+}
+
+#newsletter .suscribe {
+    width: 50%;
+    text-align: center;
+}
+
+.suscribe input {
+    height: 11vh;
+    width: 48%;
+    margin: 0;
+    padding: 0;
+}
+
+.boton-suscribe {
+    width: 30% !important;
+    height: 11vh;
+    border: 2px solid rgb(0, 53, 31);
+    background-color: rgb(0, 120, 80);
+    border-top-right-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+#footer {
+    width: 96%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    column-gap: 3%;
+    margin: 0 auto;
+}
+
+#footer .parte-footer {
+    width: 31%;
+}
+
+.parte-footer .pay {
+    border: 1px solid black;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+
+.seguirnos div {
+    width: 40%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+    .navbar>.container-fluid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .navbar-toggler {
+        grid-column: 4;
+    }
+
+    .navbar-collapse {
+        grid-column: 3/4;
+    }
+
+    .nav-item{
+        padding-left: 50% !important;
+    }
+
+    body {
+        font-size: 0.875rem;
+    }
+
+    main {
+        position: relative;
+    }
+
+    main div {
+        top: 10vh;
+        width: 47%;
+    }
+
+    main div h1 {
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+    .parrafo-banner {
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+    }
+
+    .buttonAction {
+        font-weight: 700;
+        font-size: 14px;
+        box-shadow: 0 1px 4px black;
+    }
+
+    .parrafo {
+        font-weight: 300;
+    }
+
+
+    .subtitle {
+        margin: 1rem;
+        font-size: 25px;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+
+    .name {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    .reviews {
+        margin-top: 10vh;
+        padding-top: 0.5%;
+    }
+
+    #reviews {
+        height: 74vh;
+        grid-auto-columns: 60%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 2%;
+        overflow-y: hidden;
+    }
+
+    .resenias-nombre {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .resenias-provincia {
+        font-size: 14px;
+    }
+
+    #newsletter {
+        border: 10px solid rgba(35, 95, 197, 0.966);
+        height: 40vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #newsletter .suscribe {
+        width: 100%;
+    }
+
+    .suscribe input {
+        height: 8vh;
+        width: 70%;
+        margin-bottom: 1%;
+        font-size: 14px;
+        padding-left: 1%;
+    }
+
+    .boton-suscribe {
+        width: 50% !important;
+        height: 6vh !important;
+        border: 1.2px solid rgb(0, 53, 31);
+        border-bottom-left-radius: 10px;
+        font-weight: 400;
+    }
+
+    #footer {
+        width: 97%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #footer .parte-footer {
+        width: 100%;
+        padding-bottom: 2%;
+    }
+
+    .parte-footer .pay {
+        border: 1px solid black;
+        margin: 1%;
+        border-radius: 10px;
+        display: flex;
+    }
+
+    .seguirnos div {
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8125rem;
+    }
+
+    main {
+        position: relative;
+    }
+
+    main div {
+        top: 18vh;
+        width: 48%;
+    }
+
+    main div h1 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .parrafo-banner {
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 500;
+    }
+
+    .buttonAction {
+        font-weight: 600;
+        font-size: 14px;
+        padding-right: 40%;
+        box-shadow: 0 1px 4px black;
+    }
+
+    .parrafo {
+        font-weight: 300;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 65%;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .name {
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    .boton {
+        padding: 0;
+        padding: 2% 0;
+    }
+
+    #reviews {
+        height: 68vh;
+        grid-auto-columns: 67%;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 2%;
+        overflow-y: hidden;
+    }
+
+    .resenias-nombre {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .resenias-provincia {
+        font-size: 12px;
+    }
+
+    .suscribe input {
+        height: 7vh;
+        font-size: 13px;
+    }
+
+    .boton-suscribe {
+        width: 55% !important;
+        height: 5vh !important;
+    }
+}

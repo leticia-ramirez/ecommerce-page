@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 247, 255);
+    font-size: 1.1rem;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+}
+
+nav .navbarHead div {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .navbarHead ul li {
+    padding: 0 9% 0 1%;
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    border-left: 1.5px solid black;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 1.1 rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#descripcion{
+    resize: both;
+    width: 100%;
+    height: 25vh;
+}
+
+.btn{
+    width: 70%;
+
+}
+
+section{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+}
+form {
+    grid-column: 1;
+}
+
+.people{
+    grid-column: 2;
+    margin-top: 10vh;
+}
+
+.people div{
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+.people div p{
+    position: absolute;
+    top: 0;
+    left: 26vh;
+}
+
+@media (max-width: 576px) {
+    .navbar>.container-fluid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .navbar-toggler {
+        grid-column: 4;
+    }
+
+    .navbar-collapse {
+        grid-column: 3/4;
+    }
+
+    .nav-item{
+        padding-left: 50% !important;
+    }
+
+    body {
+        font-size: 0.875rem;
+    }
+}
