@@ -1,43 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(240, 247, 255);
-    font-size: 1.1rem;
-    overflow-x: hidden;
-}
-
-.header {
-    width: 100%;
-}
-
-nav .navbarHead div {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-nav .navbarHead ul li {
-    padding: 0 9% 0 1%;
-    list-style: none;
-    flex: 1;
-    text-align: center;
-    border-left: 1.5px solid black;
-    flex-shrink: 1;
-    flex-grow: 1;
-    flex-basis: 1.1 rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-}
-
 main {
     position: relative;
     width: 100%;
@@ -152,7 +112,7 @@ main div {
 }
 
 #reviews {
-    height: 65vh;
+    height: 53vh;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 40%;
@@ -192,93 +152,7 @@ main div {
     text-align: center;
     margin: 1rem;
 }
-
-#newsletter {
-    border: 20px solid rgba(35, 95, 197, 0.966);
-    background-color: rgba(1, 73, 198, 0.332);
-    height: 40vh;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    margin: 0 auto;
-    width: 100%;
-    align-items: center;
-}
-
-#newsletter .suscribe {
-    width: 50%;
-    text-align: center;
-}
-
-.suscribe input {
-    height: 11vh;
-    width: 48%;
-    margin: 0;
-    padding: 0;
-}
-
-.boton-suscribe {
-    width: 30% !important;
-    height: 11vh;
-    border: 2px solid rgb(0, 53, 31);
-    background-color: rgb(0, 120, 80);
-    border-top-right-radius: 10px;
-    color: white;
-    font-weight: 500;
-}
-
-#footer {
-    width: 96%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    column-gap: 3%;
-    margin: 0 auto;
-}
-
-#footer .parte-footer {
-    width: 31%;
-}
-
-.parte-footer .pay {
-    border: 1px solid black;
-    margin-bottom: 5%;
-    border-radius: 10px;
-}
-
-.seguirnos div {
-    width: 40%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 @media (max-width: 576px) {
-    .navbar>.container-fluid {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-
-    .navbar-toggler {
-        grid-column: 4;
-    }
-
-    .navbar-collapse {
-        grid-column: 3/4;
-    }
-
-    .nav-item{
-        padding-left: 50% !important;
-    }
-
-    body {
-        font-size: 0.875rem;
-    }
-
     main {
         position: relative;
     }
@@ -349,65 +223,10 @@ main div {
     .resenias-provincia {
         font-size: 14px;
     }
-
-    #newsletter {
-        border: 10px solid rgba(35, 95, 197, 0.966);
-        height: 40vh;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    #newsletter .suscribe {
-        width: 100%;
-    }
-
-    .suscribe input {
-        height: 8vh;
-        width: 70%;
-        margin-bottom: 1%;
-        font-size: 14px;
-        padding-left: 1%;
-    }
-
-    .boton-suscribe {
-        width: 50% !important;
-        height: 6vh !important;
-        border: 1.2px solid rgb(0, 53, 31);
-        border-bottom-left-radius: 10px;
-        font-weight: 400;
-    }
-
-    #footer {
-        width: 97%;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    #footer .parte-footer {
-        width: 100%;
-        padding-bottom: 2%;
-    }
-
-    .parte-footer .pay {
-        border: 1px solid black;
-        margin: 1%;
-        border-radius: 10px;
-        display: flex;
-    }
-
-    .seguirnos div {
-        width: 20%;
-    }
 }
 
 
 @media (max-width: 480px) {
-    body {
-        font-size: 0.8125rem;
-    }
-
     main {
         position: relative;
     }
@@ -477,15 +296,5 @@ main div {
 
     .resenias-provincia {
         font-size: 12px;
-    }
-
-    .suscribe input {
-        height: 7vh;
-        font-size: 13px;
-    }
-
-    .boton-suscribe {
-        width: 55% !important;
-        height: 5vh !important;
     }
 }
