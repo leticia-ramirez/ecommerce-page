@@ -24,32 +24,40 @@ form {
 .people .equipo {
     font-size: 26px;
     font-weight: 500;
+    
+    font-family: 'Merriweather', serif;
+    font-weight: 900 !important;
 }
 
 .people {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content:space-around;
+    justify-content: space-around;
     height: 90vh;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.people div{
+.people div {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content:left;
+    justify-content: left;
     gap: 4%;
+    
+    font-family: 'Merriweather', serif;
 }
 
-.people div img{
+.people div img {
     max-width: 17%;
     max-height: fit-content;
 }
 
-.people div p span{
-    font-weight: 500;
+.people div p span {
+    font-weight: 1000;
     display: block;
+    
 }
 
 .seccion-mapa {
@@ -79,6 +87,9 @@ form {
     border-bottom-left-radius: 12px;
     border-right: 0;
     border-top: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200 !important;
+    font-size: 16px;
 }
 
 @media (max-width: 576px) {
@@ -99,9 +110,10 @@ form {
         flex-direction: column;
     }
 
-    .people{
+    .people {
         max-height: 70vh;
     }
+
     .people .equipo {
         font-size: 20px;
         font-weight: 500;
@@ -117,7 +129,7 @@ form {
     }
 
     .direccion {
-        top: 83vh;
+        top: 78%;
         bottom: 0;
         right: 0;
         border-radius: 0;
@@ -125,10 +137,13 @@ form {
         border-top-left-radius: 15px;
         border-right: 0;
         border-bottom: 0;
+        font-size: 12px;
     }
 
     h2 {
         font-size: 20px;
+        font-family: 'Merriweather', serif;
+        font-weight: 1000 !important;
     }
 
 }
