@@ -110,8 +110,7 @@ main div {
     margin-top: 7vh;
     background-color: rgb(223, 238, 255);
     overflow-y: hidden !important;
-    height: 60vh;
-    min-height: 55vh;
+    height: fit-content;
 }
 
 #reviews {
