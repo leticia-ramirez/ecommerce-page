@@ -38,8 +38,7 @@ nav ul li a {
     padding-left: 4%;
     background-color: rgba(246, 130, 92, 1);
     min-height: 35vh;
-    max-height: 40vh;
-    min-height: 20vh;
+    max-height: 48vh;
     display: flex !important;
     flex-direction: column;
     margin: 0 auto;
@@ -139,10 +138,6 @@ nav ul li a {
     h3{
         font-size: 17px;
     }
-    #newsletter {
-        height: 35vh;
-        display: block;
-    }
 
     .newsletter-container{
         max-width: 60%;
@@ -222,10 +217,6 @@ nav ul li a {
     h3{
         font-size: 17px;
     }
-    #newsletter {
-        height: 35vh;
-        display: block;
-    }
 
     .newsletter-container{
         max-width: 60%;
@@ -237,7 +228,7 @@ nav ul li a {
     }
 
     #newsletter img{
-        height: 30vh !important;
+        height: auto !important;
     }
 
     .suscribe input {

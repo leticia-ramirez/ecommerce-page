@@ -19,7 +19,6 @@ form {
 
 .people {
     grid-column: 2;
-    margin-top: 7vh;
 }
 
 .people .equipo {
@@ -27,15 +26,30 @@ form {
     font-weight: 500;
 }
 
-.people div {
-    position: relative;
-    margin-bottom: 5vh;
+.people {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    height: 90vh;
 }
 
-.people div p {
-    position: absolute;
-    top: 0;
-    left: 13vh;
+.people div{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content:left;
+    gap: 4%;
+}
+
+.people div img{
+    max-width: 17%;
+    max-height: fit-content;
+}
+
+.people div p span{
+    font-weight: 500;
+    display: block;
 }
 
 .seccion-mapa {
@@ -85,10 +99,9 @@ form {
         flex-direction: column;
     }
 
-    .people {
-        margin-left: 4%;
+    .people{
+        max-height: 70vh;
     }
-
     .people .equipo {
         font-size: 20px;
         font-weight: 500;
