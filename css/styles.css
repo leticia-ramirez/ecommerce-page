@@ -23,9 +23,14 @@ main div {
 
 .parrafo-banner {
     font-size: 20px;
-    font-weight: 400;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 200 !important;
     color: black;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 900 !important;
 }
 
 .buttonAction {
@@ -45,15 +50,19 @@ main div {
 }
 
 .parrafo {
-    font-weight: 400;
     color: rgb(255, 255, 255);
     text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400 !important;
 }
 
 .boton {
     width: 85%;
     background-color: rgb(44, 163, 64);
     color: white;
+
+    font-family: 'Merriweather', serif;
+    font-weight: 900 !important;
 }
 
 #products {
@@ -87,6 +96,8 @@ main div {
     font-size: 0.7rem;
     color: rgb(130, 130, 130);
     padding-left: 5%;
+    font-family: 'Merriweather', serif;
+    font-weight: 600 !important;
 }
 
 .price {
@@ -94,12 +105,15 @@ main div {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400 !important;
 }
 
 .name {
     text-align: center;
-    font-weight: 700;
     font-size: 18px;
+    font-family: 'Merriweather', serif;
+    font-weight: 500 !important;
 }
 
 .card div div button {
@@ -133,6 +147,11 @@ main div {
     margin: 0;
 }
 
+.resenias-contenido {
+    font-family: 'Merriweather', serif;
+    font-weight: 300 !important;
+}
+
 .resenia-estrellas i {
     color: #f5a623;
     font-size: 14px;
@@ -140,13 +159,15 @@ main div {
 
 .resenias-nombre {
     font-size: 18px;
-    font-weight: 500;
     display: flex;
     flex-wrap: nowrap;
+    font-family: 'Merriweather', serif;
+    font-weight: 400 !important;
 }
 
 .resenias-provincia {
-    font-weight: 200;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300 !important;
 }
 
 .subtitle {
@@ -157,7 +178,7 @@ main div {
 @media (max-width: 576px) {
     main {
         max-height: 90vh;
-        min-height:min-content;
+        min-height: min-content;
         background-color: #c7cccc;
     }
 
@@ -196,6 +217,9 @@ main div {
         font-weight: 300;
     }
 
+    .resenias-contenido {
+        font-size: 13px;
+    }
 
     .subtitle {
         margin: 1rem;
@@ -221,7 +245,7 @@ main div {
         height: fit-content;
     }
 
-    .boton{
+    .boton {
         width: 60%;
     }
 
@@ -234,7 +258,7 @@ main div {
     }
 
     .resenias-nombre {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
     }
 
