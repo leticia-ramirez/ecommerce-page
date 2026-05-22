@@ -1,12 +1,10 @@
 #descripcion {
-    resize: both;
     width: 100%;
     height: 25vh;
 }
 
 .btn {
     width: 70%;
-
 }
 
 section {
@@ -70,9 +68,17 @@ form {
 }
 
 @media (max-width: 576px) {
+    #descripcion {
+        resize: none;
+        min-width: 92%;
+        max-width: 95%;
+        height: 20vh;
+    }
+
     body {
         font-size: 0.875rem;
     }
+
     section {
         display: none;
         display: flex !important;
@@ -90,13 +96,13 @@ form {
 
     .people div p {
         top: 10px;
-        left: 30vh;
+        left: 25%;
     }
 
     .mapa-container {
         width: 96%;
     }
-    
+
     .direccion {
         top: 83vh;
         bottom: 0;
@@ -108,11 +114,34 @@ form {
         border-bottom: 0;
     }
 
-    h2{
+    h2 {
         font-size: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .people div p {
+        top: 10px;
+        left: 26%;
+    }
+
+    .people {
+        margin: 0;
+        margin-top: 18px;
+        margin-left: 10px;
     }
 }
 
-@media (max-width: 480px){
-    
+@media (max-width: 376px) {
+    .people div p {
+        font-size: 13px;
+        top: 10px;
+        left: 29%;
+    }
+
+    .people {
+        margin: 0;
+        margin-top: 18px;
+    }
 }

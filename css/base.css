@@ -14,23 +14,17 @@ body {
     width: 100%;
 }
 
-nav .navbarHead div {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
+.navbar>.navbarHead{
+    display: grid !important;
+    grid-template-columns: 2fr 2fr;
     overflow-x: hidden;
 }
 
 nav .navbarHead ul li {
     padding: 0 9% 0 1%;
     list-style: none;
-    flex: 1;
     text-align: center;
     border-left: 1.5px solid black;
-    flex-shrink: 1;
-    flex-grow: 1;
 }
 
 nav ul li a {
@@ -43,21 +37,26 @@ nav ul li a {
     padding-top: 4%;
     padding-left: 4%;
     background-color: rgba(246, 130, 92, 1);
-    height: 40vh;
+    min-height: 35vh;
+    max-height: 40vh;
+    min-height: 20vh;
     display: flex !important;
     flex-direction: column;
     margin: 0 auto;
 }
 
 .newsletter-container{
-    max-width: 70%;
+    max-width: 55%;
 }
 
 #newsletter img{
     position: absolute;
     top: 0;
     right: 0;
-    height: 34.5vh !important;
+    min-width: 25%;
+    min-height: 85%;
+    max-width: 40%;
+    max-height: 100%;
     border-bottom-left-radius: 80px;
 }
 
@@ -141,7 +140,7 @@ nav ul li a {
         font-size: 17px;
     }
     #newsletter {
-        height: 50vh;
+        height: 35vh;
         display: block;
     }
 
@@ -203,13 +202,53 @@ nav ul li a {
         font-size: 0.8125rem;
     }
 
+    .navbar>.container-fluid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .navbar-toggler {
+        grid-column: 4;
+    }
+
+    .navbar-collapse {
+        grid-column: 3/4;
+    }
+
+    .nav-item{
+        padding-left: 50% !important;
+    }
+
+    h3{
+        font-size: 17px;
+    }
+    #newsletter {
+        height: 35vh;
+        display: block;
+    }
+
+    .newsletter-container{
+        max-width: 60%;
+        font-size: 12px;
+    }
+
+    #newsletter .suscribe {
+        width: 60%;
+    }
+
+    #newsletter img{
+        height: 30vh !important;
+    }
+
     .suscribe input {
-        height: 7vh;
-        font-size: 13px;
+        height: 4vh;
+        max-width: 90%;
+        font-size: 12px;
     }
 
     .boton-suscribe {
-        width: 55% !important;
-        height: 5vh !important;
+        width: 20%;
+        height: 3.7vh !important;
     }
+
 }
