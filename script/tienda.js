@@ -1,5 +1,3 @@
-const contenedor = document.querySelector('.productos-container');
-
 function cargarProductos() {
     const parametrosURL = new URLSearchParams(window.location.search);
     const categoriaSeleccionada = parametrosURL.get('category');
@@ -18,11 +16,14 @@ function cargarProductos() {
         })
         .then(productos => {
             const cardsHTML = mapearProductosHTML(productos);
-            contenedor.innerHTML = cardsHTML;
+            const contenedor = document.querySelector('.productos-container');
             
-            adjuntarEventos(productos);
+            if (contenedor) {
+                contenedor.innerHTML = cardsHTML;
+                adjuntarEventos(productos);
+            }
         })
-        
+
         .catch(error => console.error("Error al procesar la API:", error));
 }
 
