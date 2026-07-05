@@ -28,7 +28,7 @@ function cargarProductosAgrupadosPorCategoria() {
                 seccionCategoria.innerHTML = `
                     <div class="header-producto">
                         <h2 class="categoria-titulo">${nombreCategoria.toUpperCase()}</h2>
-                        <a id="btn-ir-${categoriaLimpia}" class="btn-ver-mas" style="cursor: pointer;" href="../templates/tienda.html?category=${encodeURIComponent(nombreCategoria)}">
+                        <a id="btn-ir-${categoriaLimpia}" class="btn-ver-mas" style="cursor: pointer;" href="./templates/tienda.html?category=${encodeURIComponent(nombreCategoria)}">
                             Ver mas productos<i class="fas fa-angle-double-right"></i> 
                         </a>
                     </div>
