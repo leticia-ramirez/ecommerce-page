@@ -562,7 +562,8 @@ body {
     }
 
     .newsletter-container {
-        max-width: 60%;
+        min-width: 60%;
+        max-width: 70%;
         font-size: 12px;
     }
 
