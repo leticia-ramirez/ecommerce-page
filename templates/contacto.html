@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,28 +86,8 @@
                 </div>
 
                 <div class="col-lg-11 col-sm-11 col-11">
-                    <input type="text" name="pais" id="pais" class="form-control" placeholder="País" required>
-                    <div class="mensaje-feedback"></div>
-                </div>
-
-                <div class="col-lg-11 col-sm-11 col-11">
-                    <input type="text" name="provincia" id="provincia" class="form-control" placeholder="Provincia"
-                        required>
-                    <div class="mensaje-feedback"></div>
-                </div>
-
-                <div class="col-lg-11 col-sm-11 col-11">
                     <div class="input-group has-validation">
-                        <!-- Cambiado a type="text" para que no interfiera la validación nativa del email parcial -->
                         <input type="text" id="email-usuario" class="form-control" placeholder="Tumail" required>
-                        <select id="email-dominio" class="form-select" style="max-width: 136px;">
-                            <option value="@gmail.com">@gmail.com</option>
-                            <option value="@hotmail.com">@hotmail.com</option>
-                            <option value="@outlook.com">@outlook.com</option>
-                            <option value="@yahoo.com">@yahoo.com</option>
-                        </select>
-                        <!-- Este input oculto enviará el email completo unificado a Formspree -->
-                        <input type="hidden" name="email" id="email-completo">
                         <div class="mensaje-feedback"></div>
                     </div>
                 </div>
@@ -140,7 +121,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-12 col-sm-3">
+                <div class="col-12 col-lg-12">
                     <button class="btn btn-primary" type="submit">Enviar</button>
                 </div>
             </form>
@@ -233,9 +214,10 @@
         <div class="parte-footer">
             <p><b>Descarga la App</b></p>
             <p>Desde la App Store a Google Play</p>
-            <img src="../img/pay/app.jpg" alt="App Store" class="pay">
-            <img src="../img/pay/play.jpg" alt="Play Store" class="pay">
-
+            <div class="app-store">
+                <img src="../img/pay/app.jpg" alt="App Store" class="pay">
+                <img src="../img/pay/play.jpg" alt="Play Store" class="pay">
+            </div>
             <p><b>Pago seguro</b></p>
             <img src="../img/pay/pay.png" alt="medios de pago">
         </div>

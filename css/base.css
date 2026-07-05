@@ -305,18 +305,29 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(5px);           
-    -webkit-backdrop-filter: blur(5px);   
-    z-index: 997;         
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 997;
     opacity: 0;
-    pointer-events: none;                
-    transition: opacity 0.3s ease;       
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 .carrito-overlay.active {
     opacity: 1;
-    pointer-events: auto;                
+    pointer-events: auto;
+}
+
+.app-store {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.app-store img{
+    width: 45%;
 }
 
 @media (max-width: 799px) {
@@ -361,7 +372,7 @@ body {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
         transition: right 0.3s ease;
     }
-    
+
     .navbar a {
         font-size: 17px;
     }
@@ -376,6 +387,36 @@ body {
 
     .navbar li:has(.btn-abrir-carrito) {
         display: none;
+    }
+
+
+    #newsletter {
+        min-height: 24vh;
+        max-height: 27vh;
+        font-size: 16px;
+    }
+
+    .suscribe input {
+        height: 5vh;
+    }
+
+    .boton-suscribe {
+        max-height: 11vh;
+        height: 10vh;
+        font-weight: 300 !important;
+    }
+
+    .titulo-newsletter {
+        font-size: 17px;
+        font-weight: 400 !important;
+    }
+
+    .app-store{
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .app-store img{
+        width: 70%;
     }
 }
 
@@ -400,6 +441,7 @@ body {
         transition: 0.3s ease;
         font-size: 14px;
     }
+
     .navbar-collapse {
         grid-column: 3/4;
     }
@@ -462,6 +504,34 @@ body {
 
     .seguirnos div {
         width: 20%;
+    }
+
+    #newsletter {
+        min-height: 19vh;
+        max-height: 20vh;
+        font-size: 13px;
+    }
+
+    .suscribe input {
+        height: 4vh;
+    }
+
+    .boton-suscribe {
+        height: 4vh !important;
+    }
+
+    .titulo-newsletter {
+        font-size: 14px;
+        font-weight: 400 !important;
+    }
+
+    .app-store{
+        flex-direction: row !important;
+        align-items: center;
+        width: 70%;
+    }
+    .app-store img{
+        width: 90%;
     }
 }
 

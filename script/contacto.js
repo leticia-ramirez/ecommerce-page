@@ -2,12 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById('formulario-contacto');
     const tuNombre = document.getElementById('nombre');
     const tuApellido = document.getElementById('apellido');
-    const tuPais = document.getElementById('pais');
-    const tuProvincia = document.getElementById('provincia');
     
-    const emailUsuario = document.getElementById('email-usuario');
-    const emailDominio = document.getElementById('email-dominio');
-    const emailCompleto = document.getElementById('email-completo');
+    const email = document.getElementById('email-usuario');
     
     const asunto = document.getElementById('asunto');
     const tuMensaje = document.getElementById('descripcion');
@@ -60,33 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarEstadoCampo(tuApellido, true);
         }
 
-        if (tuPais.value.trim() === '') {
-            mostrarEstadoCampo(tuPais, false, 'Por favor, ingrese su país.');
+        const correo = email.value.trim();
+
+        if (correo === '') {
+            mostrarEstadoCampo(email, false, 'El correo electrónico es obligatorio.');
+            formularioValido = false;
+        } else if (!esCorreoValido(correo)) {
+            mostrarEstadoCampo(email, false, 'Ingresá un correo válido.');
             formularioValido = false;
         } else {
-            mostrarEstadoCampo(tuPais, true);
-        }
-
-        if (tuProvincia.value.trim() === '') {
-            mostrarEstadoCampo(tuProvincia, false, 'Por favor, ingrese su provincia.');
-            formularioValido = false;
-        } else {
-            mostrarEstadoCampo(tuProvincia, true);
-        }
-
-        const usuario = emailUsuario.value.trim();
-        const dominio = emailDominio.value;
-        const correoUnificado = usuario + dominio;
-
-        if (usuario === '') {
-            mostrarEstadoCampo(emailUsuario, false, 'El correo electrónico es obligatorio.');
-            formularioValido = false;
-        } else if (!esCorreoValido(correoUnificado)) {
-            mostrarEstadoCampo(emailUsuario, false, 'Ingresá un correo válido.');
-            formularioValido = false;
-        } else {
-            mostrarEstadoCampo(emailUsuario, true);
-            emailCompleto.value = correoUnificado;
+            mostrarEstadoCampo(email, true);
         }
 
         if (asunto.value === '') {

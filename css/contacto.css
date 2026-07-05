@@ -1,4 +1,4 @@
-main{
+main {
     margin-top: 4%;
 }
 
@@ -9,6 +9,7 @@ main{
 
 .btn {
     width: 70%;
+    margin-left: 13%;
 }
 
 section {
@@ -38,8 +39,7 @@ form {
     flex-wrap: nowrap;
     justify-content: space-around;
     height: 60vh;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .people div {
@@ -48,7 +48,7 @@ form {
     flex-direction: row;
     justify-content: left;
     gap: 4%;
-    
+
     font-family: 'Merriweather', serif;
 }
 
@@ -60,11 +60,11 @@ form {
 .people div p span {
     font-weight: 1000;
     display: block;
-    
+
 }
 
 .seccion-mapa {
-    margin-top: 5vh;
+    padding-top: 5vh;
     padding: 4vh 2vh;
     background-color: rgb(227, 239, 254);
     display: block !important;
@@ -96,7 +96,9 @@ form {
     font-size: 18px;
 }
 
-.form-control, .form-select, textarea {
+.form-control,
+.form-select,
+textarea {
     border: 1px solid #ced4da;
     transition: border-color 0.2s ease-in-out;
 }
@@ -107,6 +109,7 @@ form {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
 .mensaje-feedback {
     width: 100%;
     margin-top: 0.25rem;
@@ -122,7 +125,8 @@ form {
     border-bottom: 2px solid rgb(60, 255, 0) !important;
 }
 
-textarea.campo-error, input[type="checkbox"].campo-error {
+textarea.campo-error,
+input[type="checkbox"].campo-error {
     border: 1px solid rgb(255, 0, 0) !important;
 }
 
@@ -130,17 +134,7 @@ textarea.campo-error, input[type="checkbox"].campo-error {
     color: rgb(255, 0, 0);
 }
 
-p{
-    margin-bottom: 5px;
-    font-size: 19px;
-}
-
 @media (max-width: 780px) {
-    p{
-        margin-bottom: 5px;
-        font-size: 16px;
-    }
-
     #descripcion {
         resize: none;
         min-width: 92%;
@@ -159,7 +153,12 @@ p{
     }
 
     .people {
+        margin-top: 30px;
         max-height: 45vh;
+        padding-top: 30px;
+        padding-left: 30px;
+        background-color: rgba(228, 240, 250, 0.853);
+        transition: background-color 3s ease-out;
     }
 
     .people .equipo {
@@ -200,16 +199,22 @@ p{
         font-size: 17px;
     }
 
+    .btn {
+        width: 50%;
+        margin-left: 25%;
+    }
+
 }
 
 @media (max-width: 580px) {
-    .people .equipo{
+    .people .equipo {
         font-size: 20px;
     }
 
-    p{
+    p {
         font-size: 14px;
     }
+
     .people div p {
         top: 10px;
         left: 26%;
