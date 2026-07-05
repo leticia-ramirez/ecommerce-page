@@ -17,11 +17,12 @@ function cargarProductos() {
         .then(productos => {
             const cardsHTML = mapearProductosHTML(productos);
             const contenedor = document.querySelector('.productos-container');
-            
+
             if (contenedor) {
                 contenedor.innerHTML = cardsHTML;
-                adjuntarEventos(productos);
             }
+            
+            adjuntarEventos(productos);
         })
 
         .catch(error => console.error("Error al procesar la API:", error));
