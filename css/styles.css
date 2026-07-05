@@ -27,6 +27,7 @@ main img {
     font-weight: 900;
     color: rgb(0, 144, 96);
     z-index: -999;
+    transition: opacity 0.5s ease;
 }
 
 .parrafo-banner {
@@ -622,6 +623,10 @@ h1 {
 
     .categoria-titulo {
         font-size: 14px;
+    }
+
+    .card {
+        width: 100%;
     }
 }
 

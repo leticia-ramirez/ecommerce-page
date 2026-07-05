@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (esValido) {
             input.classList.remove('campo-error');
             input.classList.add('campo-correcto');
+
             if (textoError) {
                 textoError.innerText = '';
                 textoError.classList.remove('error-texto');
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const esCorreoValido = (correo) => {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         return regex.test(correo);
     };
 
@@ -45,28 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
         let formularioValido = true;
 
         if (tuNombre.value.trim() === '') {
-            mostrarEstadoCampo(tuNombre, false, 'Por favor, ingresá tu nombre.');
+            mostrarEstadoCampo(tuNombre, false, 'Por favor, ingrese su nombre.');
             formularioValido = false;
         } else {
             mostrarEstadoCampo(tuNombre, true);
         }
 
         if (tuApellido.value.trim() === '') {
-            mostrarEstadoCampo(tuApellido, false, 'Por favor, ingresá tu apellido.');
+            mostrarEstadoCampo(tuApellido, false, 'Por favor, ingrese su apellido.');
             formularioValido = false;
         } else {
             mostrarEstadoCampo(tuApellido, true);
         }
 
         if (tuPais.value.trim() === '') {
-            mostrarEstadoCampo(tuPais, false, 'Por favor, ingresá tu país.');
+            mostrarEstadoCampo(tuPais, false, 'Por favor, ingrese su país.');
             formularioValido = false;
         } else {
             mostrarEstadoCampo(tuPais, true);
         }
 
         if (tuProvincia.value.trim() === '') {
-            mostrarEstadoCampo(tuProvincia, false, 'Por favor, ingresá tu provincia.');
+            mostrarEstadoCampo(tuProvincia, false, 'Por favor, ingrese su provincia.');
             formularioValido = false;
         } else {
             mostrarEstadoCampo(tuProvincia, true);

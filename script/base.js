@@ -1,9 +1,16 @@
+const NOMBRE_CARRITO = 'carritoDeCompras';
+
 document.addEventListener('DOMContentLoaded', () => {
     const bar = document.getElementById('bar');
     const close = document.getElementById('close');
     const navbar = document.getElementById('navbar');
+    
     const carritoOverlay = document.getElementById('carrito-overlay')
 
+    const carritoSidebar = document.getElementById('carrito-lateral');
+    const botonesAbrir = document.querySelectorAll('.btn-abrir-carrito');
+    const botonCerrar = document.getElementById('close-carrito');
+    
     if (bar) bar.addEventListener('click', () => {
         navbar.classList.add('active');
         carritoOverlay.classList.add('active');
@@ -14,10 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carritoOverlay.classList.remove('active');
     }) 
 
-    const carritoSidebar = document.getElementById('carrito-lateral');
-    const botonesAbrir = document.querySelectorAll('.btn-abrir-carrito');
-    const botonCerrar = document.getElementById('close-carrito');
-    
     botonesAbrir.forEach(boton => {
         boton.addEventListener('click', (e) => {
             e.preventDefault();
@@ -43,11 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+const obtenerCarrito = () => JSON.parse(localStorage.getItem(NOMBRE_CARRITO)) || [];
+
+function guardarCarrito(carrito){
+    localStorage.setItem(NOMBRE_CARRITO, JSON.stringify(carrito)); 
+}
+
 function actualizarCarrito() {
     const contenedorItems = document.getElementById('carrito-items-container');
     const contenedorTotal = document.getElementById('carrito-total');
 
-    let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
+    let carrito = obtenerCarrito();
 
     if (carrito.length === 0) {
         contenedorItems.innerHTML = '<p style="text-align:center; color:#777;">Tu carrito esta vacio.</p>';
@@ -88,13 +97,13 @@ function construccionItem(producto){
 }
 
 function adjuntarEventosCarritoLateral() {
-    let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
+    let carrito = obtenerCarrito();
 
     document.querySelectorAll('.eliminar').forEach(boton => {
         boton.addEventListener('click', () => {
             const id = boton.dataset.id;
             carrito = carrito.filter(item => String(item.id) !== String(id));
-            localStorage.setItem('carritoDeCompras', JSON.stringify(carrito));
+            guardarCarrito(carrito);
 
             actualizarCarrito(); 
         });
@@ -116,7 +125,7 @@ function modificarCantidadProductos(carrito){
                     carrito = carrito.filter(item => String(item.id) !== String(id));
                 }
 
-                localStorage.setItem('carritoDeCompras', JSON.stringify(carrito));
+                guardarCarrito(carrito);
                 actualizarCarrito();
             }
         });
@@ -129,7 +138,8 @@ function modificarCantidadProductos(carrito){
             
             if (producto) {
                 producto.cantidad++;
-                localStorage.setItem('carritoDeCompras', JSON.stringify(carrito));
+                
+                guardarCarrito(carrito);
                 actualizarCarrito();
             }
         });
