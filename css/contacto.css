@@ -1,3 +1,7 @@
+main{
+    margin-top: 4%;
+}
+
 #descripcion {
     width: 100%;
     height: 25vh;
@@ -22,9 +26,8 @@ form {
 }
 
 .people .equipo {
-    font-size: 26px;
+    font-size: 27px;
     font-weight: 500;
-    
     font-family: 'Merriweather', serif;
     font-weight: 900 !important;
 }
@@ -34,7 +37,7 @@ form {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
-    height: 90vh;
+    height: 60vh;
     width: 90%;
     margin: 0 auto;
 }
@@ -75,6 +78,7 @@ form {
 
 .parrafo {
     padding-left: 6%;
+    font-size: 20px;
 }
 
 .direccion {
@@ -89,10 +93,54 @@ form {
     border-top: 0;
     font-family: 'DM Sans', sans-serif;
     font-weight: 200 !important;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-@media (max-width: 576px) {
+.form-control, .form-select, textarea {
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.mensaje-feedback {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 18px;
+}
+
+.campo-error {
+    border-bottom: 2px solid rgb(255, 0, 0) !important;
+    border-color: rgb(255, 0, 0) !important;
+}
+
+.campo-correcto {
+    border-bottom: 2px solid rgb(60, 255, 0) !important;
+}
+
+textarea.campo-error, input[type="checkbox"].campo-error {
+    border: 1px solid rgb(255, 0, 0) !important;
+}
+
+.mensaje-feedback.error-texto {
+    color: rgb(255, 0, 0);
+}
+
+p{
+    margin-bottom: 5px;
+    font-size: 19px;
+}
+
+@media (max-width: 780px) {
+    p{
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
     #descripcion {
         resize: none;
         min-width: 92%;
@@ -101,7 +149,7 @@ form {
     }
 
     body {
-        font-size: 0.875rem;
+        font-size: 17px;
     }
 
     section {
@@ -111,11 +159,11 @@ form {
     }
 
     .people {
-        max-height: 70vh;
+        max-height: 45vh;
     }
 
     .people .equipo {
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 500;
     }
 
@@ -129,7 +177,7 @@ form {
     }
 
     .direccion {
-        top: 78%;
+        top: 75%;
         bottom: 0;
         right: 0;
         border-radius: 0;
@@ -137,18 +185,31 @@ form {
         border-top-left-radius: 15px;
         border-right: 0;
         border-bottom: 0;
-        font-size: 12px;
+        font-size: 17px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 19px;
         font-family: 'Merriweather', serif;
         font-weight: 1000 !important;
     }
 
+    .mensaje-feedback {
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 17px;
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
+    .people .equipo{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 14px;
+    }
     .people div p {
         top: 10px;
         left: 26%;
@@ -159,17 +220,10 @@ form {
         margin-top: 18px;
         margin-left: 10px;
     }
-}
 
-@media (max-width: 376px) {
-    .people div p {
-        font-size: 13px;
-        top: 10px;
-        left: 29%;
-    }
-
-    .people {
-        margin: 0;
-        margin-top: 18px;
+    .mensaje-feedback {
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 14px;
     }
 }

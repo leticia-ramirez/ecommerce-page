@@ -1,7 +1,7 @@
 main {
     position: relative;
     width: 100% !important;
-    height: 98vh;
+    height: 100vh;
     background-color: #c7cccc;
 }
 
@@ -9,9 +9,16 @@ main img {
     max-width: 80%;
     min-width: 70%;
     height: 98vh;
+    object-fit: cover;
 }
 
-main div {
+.container-main {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: #c7cccc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     position: absolute;
     top: 20vh;
     right: 0;
@@ -19,6 +26,7 @@ main div {
     margin-left: 50%;
     font-weight: 900;
     color: rgb(0, 144, 96);
+    z-index: -999;
 }
 
 .parrafo-banner {
@@ -37,7 +45,7 @@ h1 {
     display: block;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 1000;
-    font-size: 18px;
+    font-size: 19px;
     margin: 0 auto;
     padding: 6px 10px;
     background-color: rgb(43, 245, 111);
@@ -47,6 +55,16 @@ h1 {
     border: 1.5px solid rgb(0, 86, 0);
     cursor: pointer;
     width: 40%;
+}
+
+.buttonAction:active{
+    box-shadow: none;
+    transition: opacity 3s ease;
+}
+
+.container-main a {
+    text-decoration: none;
+    text-align: center;
 }
 
 .parrafo {
@@ -65,63 +83,9 @@ h1 {
     font-weight: 900 !important;
 }
 
-#products {
-    display: block;
-}
-
-#cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1.4rem;
-}
-
-.card {
-    width: 40%;
-    border: 1px solid rgb(193, 193, 193);
-}
-
-#cards div img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-
-}
-
-.category {
-    font-size: 0.7rem;
-    color: rgb(130, 130, 130);
-    padding-left: 5%;
-    font-family: 'Merriweather', serif;
-    font-weight: 600 !important;
-}
-
-.price {
-    color: rgb(0, 148, 0);
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400 !important;
-}
-
-.name {
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Merriweather', serif;
-    font-weight: 500 !important;
-}
-
-.card div div button {
-    margin-bottom: 1rem;
-}
-
 .reviews {
     margin-top: 7vh;
+    padding-bottom: 5vh;
     background-color: rgb(223, 238, 255);
     overflow-y: hidden !important;
     height: fit-content;
@@ -133,6 +97,14 @@ h1 {
     grid-auto-columns: 50%;
     overflow-x: auto;
     gap: 1rem;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+#reviews::-webkit-scrollbar {
+    display: none;
 }
 
 #reviews div {
@@ -154,11 +126,11 @@ h1 {
 
 .resenia-estrellas i {
     color: #f5a623;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .resenias-nombre {
-    font-size: 18px;
+    font-size: 19px;
     display: flex;
     flex-wrap: nowrap;
     font-family: 'Merriweather', serif;
@@ -175,36 +147,367 @@ h1 {
     margin: 1rem;
 }
 
-@media (max-width: 576px) {
-    main {
-        max-height: 90vh;
-        min-height: min-content;
-        background-color: #c7cccc;
+.productos-container {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 25px;
+    padding-top: 3%;
+    width: 100%;
+    margin: 0 auto;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.productos-container::-webkit-scrollbar {
+    display: none;
+}
+
+.categoria-seccion {
+    padding-bottom: 8%;
+}
+
+.categoria-seccion:last-of-type {
+    padding-bottom: 0;
+}
+
+.card {
+    width: 450px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.producto-descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.producto-descripcion span {
+    font-size: 19px;
+    color: #777777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.producto-descripcion h5 {
+    font-size: 20px;
+    color: #333333;
+    margin: 0;
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+.producto-descripcion h4 {
+    font-size: 19px;
+    color: #2b7a78;
+    margin: 5px 0 0 0;
+    font-weight: 700;
+}
+
+.ver-descripcion,
+.carrito {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.carrito:active{
+    background-color: #888888;
+    transition: background-color 0.2s ease;
+}
+
+.ver-descripcion {
+    background-color: #f0f0f0;
+    color: #444444;
+}
+
+.ver-descripcion:hover {
+    background-color: #e0e0e0;
+}
+
+.carrito {
+    background-color: #3f8684;
+    color: #ffffff;
+}
+
+.carrito:hover {
+    background-color: #17252a7a;
+}
+
+.carrito i {
+    margin-right: 5px;
+}
+
+.btn-ver-mas {
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 500;
+    box-shadow: 3px 4px 5px black;
+    background-color: black;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.403);
+}
+
+.header-producto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.btn-ver-mas i {
+    padding-left: 10px;
+}
+
+.btn-ver-mas:active {
+    box-shadow: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-custom {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.visible .modal-custom {
+    transform: scale(1);
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 35px;
+    color: #888888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 5px;
+    line-height: 1;
+}
+
+.modal-cerrar:hover {
+    color: #333333;
+}
+
+#modalImagen {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+#modalTitulo {
+    font-size: 20px;
+    color: #333333;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+#modalDescripcion {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#modalPrecio {
+    font-size: 30px;
+    color: #2b7a78;
+    margin: 5px 0 0 0;
+    font-weight: 700;
+}
+
+#secciones-categorias-container {
+    padding: 4vh 3vh 0vh 3vh;
+}
+
+.open-container-main{
+    z-index: 90;
+}
+
+@media (max-width: 800px) {
+    .parrafo-banner {
+        font-size: 17px;
     }
 
+    h1 {
+        font-size: 1.5rem;
+    } 
+    
+    .resenia-estrellas i{
+        font-size: 17px;
+    }
+
+    .resenias-nombre {
+        font-size: 16px;
+    }
+
+    .producto-descripcion span {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .producto-descripcion h5 {
+        font-size: 17px;
+        line-height: 2;
+    }
+
+    .producto-descripcion h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .ver-descripcion,.carrito {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .btn-ver-mas {
+        width: 35%;
+        height: fit-content;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .modal-cerrar {
+        font-size: 31px;
+    }
+
+    #modalTitulo {
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    #modalDescripcion {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    #modalPrecio {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .buttonAction {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    .container-main{
+        width: 60%;
+    }
+}
+
+@media (max-width: 580px) {
     main img {
-        max-width: 80%;
-        max-height: 90vh;
-        min-width: 70%;
-        min-height: auto;
+        max-width: 100%;
     }
 
-    main div {
-        top: 10vh;
+    .container-main {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        background-color: #c7cccc;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        top: 30vh;
         width: 50%;
         padding-right: 10px;
     }
 
-    main div h1 {
-        font-size: 21px;
+    .container-main h1 {
+        font-size: 14px;
         font-weight: 500;
     }
 
     .parrafo-banner {
-        font-size: 15px;
+        font-size: 14px;
         font-family: 'Times New Roman', Times, serif;
         font-weight: 600;
     }
+
+    h1 {
+        font-size: 1.3rem !important;
+    } 
 
     .buttonAction {
         font-weight: 700;
@@ -217,26 +520,17 @@ h1 {
         font-weight: 300;
     }
 
+    .resenia-estrellas i{
+        font-size: 14px;
+    }
+
     .resenias-contenido {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .subtitle {
-        margin: 1rem;
+        margin: 14px;
         font-size: 25px;
-    }
-
-    .card {
-        width: 40%;
-    }
-
-    .price {
-        font-size: 1.1rem;
-    }
-
-    .name {
-        font-weight: 400;
-        font-size: 1rem;
     }
 
     .reviews {
@@ -258,61 +552,102 @@ h1 {
     }
 
     .resenias-nombre {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 500;
     }
 
     .resenias-provincia {
+        font-size: 13px;
+    }
+
+    .producto-descripcion span {
+        font-size: 13px;
+    }
+
+    .producto-descripcion h5 {
+        font-size: 14px;
+    }
+
+    .producto-descripcion h4 {
+        font-size: 13px;
+    }
+
+    .ver-descripcion,.carrito {
+        font-size: 13px;
+    }
+
+    .modal-cerrar {
+        font-size: 28px;
+    }
+
+    .modal-overlay {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal-custom {
+        background-color: #ffffffe8;
+    }
+
+    .modal-overlay.visible .modal-custom {
+        transform: scale(0.9);
+    }
+
+    #modalImagen {
+        max-width: 90%;
+        max-height: 200px;
+    }
+
+    #modalTitulo {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #modalDescripcion {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    #modalPrecio {
+        font-size: 23px;
+    }
+
+    .btn-ver-mas {
+        width: 43%;
+        height: fit-content;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .categoria-titulo {
         font-size: 14px;
     }
 }
 
 
 @media (max-width: 480px) {
-    main {
-        position: relative;
-    }
-
-    main div {
+    .container-main {
         top: 18vh;
         width: 48%;
     }
 
-    main div h1 {
-        font-size: 20px;
+    .container-main h1 {
         font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    main img {
+        max-width: 100%;
     }
 
     .parrafo-banner {
-        font-size: 14px;
         font-family: 'Times New Roman', Times, serif;
         font-weight: 500;
     }
 
     .parrafo {
         font-weight: 300;
-    }
-
-    .subtitle {
-        font-size: 20px;
-    }
-
-    .card {
-        width: 65%;
-    }
-
-    .price {
-        font-size: 1.3rem;
-    }
-
-    .name {
-        font-weight: 400;
-        font-size: 1.2rem;
-    }
-
-    .boton {
-        padding: 0;
-        padding: 2% 0;
     }
 
     #reviews {
@@ -324,11 +659,6 @@ h1 {
     }
 
     .resenias-nombre {
-        font-size: 14px;
         font-weight: 400;
-    }
-
-    .resenias-provincia {
-        font-size: 12px;
     }
 }

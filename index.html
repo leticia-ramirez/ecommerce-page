@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home - Ecommerce</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,153 +23,74 @@
 
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid navbarHead">
-                <div>
-                    <a href="./" class="navbar-brand">
-                        <img src="./img/logo1.png" class="logo" alt="logo-compra">
+        <a href="index.html">
+            <img src="img/logo1.png" class="logo" alt="Logo Talento Tech" width="40px" height="40px">
+        </a>
+        <div>
+            <ul id="navbar" class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./templates/tienda.html">Store</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="./templates/contacto.html">Contact</a></li>
+                <li>
+                    <a href="#" class="btn-abrir-carrito">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#products">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#reviews">Reseñas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./templates/contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                </li>
+                <a href="#" id="close" class="close">
+                    <i class="far fa-times" aria-hidden="true"></i>
+                </a>
+            </ul>
+        </div>
+        <div class="mobile">
+            <a href="#" class="btn-abrir-carrito">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
     </header>
+    
+    <div id="carrito-overlay" class="carrito-overlay"></div>
+    <section id="carrito-lateral" class="carrito-sidebar">
+        <div class="carrito-header">
+            <h3>Mi Carrito</h3>
+            <button id="close-carrito" class="close-carrito">✕</button>
+        </div>
+
+        <div id="carrito-items-container" class="carrito-body">
+        </div>
+
+        <div class="carrito-footer">
+            <div class="total-contenedor">
+                <span>Total:</span>
+                <span id="carrito-total">$0.00</span>
+            </div>
+            <button class="btn-compra">Comprar ahora</button>
+        </div>
+    </section>
 
     <main>
         <img src="./img/hero4.jpg" alt="" class="banner">
-        <div>
+        <div class="container-main">
             <h1><em>Lorem ipsum dolor sit amet!</em></h1>
             <p class="parrafo-banner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi architecto
                 reprehenderit sunt laudantium
                 ipsam</p>
             <p class="parrafo">Lorem ipsum dolor sit amet consectetur</p>
-            <input type="button" value="Ver productos" class="buttonAction">
+            <a href="#secciones-categorias-container" class="buttonAction">Ver productos</a>
         </div>
     </main>
-    <section id="products">
-        <h2 class="subtitle">Products</h2>
-        <div id="cards">
-            <div class="card">
-                <img src="./img/productos/auriculares.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="./img/productos/calular.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./img/productos/f6.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./img/productos/f7.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./img/productos/n6.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./img/productos/proyector.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./img/productos/tablet.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./img/productos/television.jpg" alt="">
-                <div>
-                    <p class="category">category</p>
-                    <p class="name">name of product</p>
-                    <p class="price">$price</p>
-                    <div>
-                        <button class="buttonAction boton">add to cart</button>
-                    </div>
-                </div>
-            </div>
-    </section>
+    <section id="secciones-categorias-container"></section>
+    <div id="overlayModal" class="modal-overlay">
+        <div class="modal-custom">
+            <button id="btnCerrarModal" class="modal-cerrar">✕</button>
+            <img id="modalImagen" src="" alt="">
+            <h5 id="modalTitulo" class="text-center"></h5>
+            <p id="modalDescripcion"></p>
+            <h4 id="modalPrecio"></h4>
+        </div>
+    </div>
     <section class="reviews">
         <h2 class="subtitle">Reviews</h2>
         <div id="reviews">
@@ -350,6 +271,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script src="./script/base.js"></script>
+    <script src="./script/productos.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
